@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test suite coverage for the Presentation API</title>
+    <meta charset='utf-8'>
+    <script src='https://www.w3.org/Tools/respec/respec-w3c-common'
+            async class='remove'></script>
+    <script class='remove'>
+      var respecConfig = {
+        specStatus: "unofficial",
+        shortName: "presentation-api-testcoverage",
+        editors: [{
+          name: "François Daoust",
+          url: "http://www.w3.org/People/#fd",
+          company: "W3C",
+          companyURL: "http://w3.org/"
+        }],        
+        wg: "Second Screen Presentation Working Group",
+        wgURI: "https://www.w3.org/2014/secondscreen/",
+        wgPublicList: "public-secondscreen",
+        wgPatentURI: "http://www.w3.org/2004/01/pp-impl/74168/status",
+      };
+    </script>
+    <style type="text/css">
+      th, td {
+        border-bottom: thin solid grey;
+      }
+      .link {
+        font-size: smaller;
+      }
+      td a {
+        border-bottom: none !important;
+      }
+      td:last-child {
+        text-align: center;
+      }
+      .coverage {
+        font-weight: bold;
+        color: #e67300;
+      }
+      .covered {
+        color: #0c0;
+      }
+      .workneeded {
+        color: #c00;
+      }
+    </style>
+  </head>
+  <body>
+    <section id='abstract'>
+      <p>
+        This document provides a rough evaluation of the coverage of the Presentation API test suite against the Presentation API specification [[!PRESENTATION-API]].
+      </p>
+    </section>
+
+    <section id='sotd'>
+      <p>
+        This document is only intended to be maintained while the Second Screen Presentation Working Group is busy assembling an implementation report to be able to publish the Presentation API specification as a Proposed Recommendation, circa end of 2016. Information in this document will quickly become obsolete afterwards.
+      </p>
+    </section>
+
+    <section>
+      <h2>Useful links</h2>
+      <ul>
+        <li><a href="https://w3c.github.com/presentation-api/">Presentation API specification</a> (Editor's Draft)</li>
+        <li><a href="https://github.com/w3c/web-platform-tests/blob/master/presentation-api/">W3C test suite</a> on GitHub - <a href="https://github.com/w3c/web-platform-tests/issues?q=is%3Aopen+label%3Apresentation-api">Open issues &amp; pull requests</a></li>
+        <li>Test results:
+          <ul>
+            <li>Controlling User-Agent: <a href="https://w3c.github.io/test-results/presentation-api/controlling-ua/all.html">All</a>, <a href="https://w3c.github.io/test-results/presentation-api/controlling-ua/less-than-2.html">Less than 2</a>, <a href="https://w3c.github.io/test-results/presentation-api/controlling-ua/complete-fails.html">Complete fails</a></li>
+            <li>Receiving User-Agent: <a href="https://w3c.github.io/test-results/presentation-api/receiving-ua/all.html">All</a>, <a href="https://w3c.github.io/test-results/presentation-api/receiving-ua/less-than-2.html">Less than 2</a>, <a href="https://w3c.github.io/test-results/presentation-api/receiving-ua/complete-fails.html">Complete fails</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section id='table'>
+      <h2>Test coverage</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th width="35%">Section</th>
+            <th>Test(s)</th>
+            <th>Covered</th>
+            <th>Assignee</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>How to update the table</h2>
+
+      <section>
+        <h2>How to update the list of sections</h2>
+        <p>
+          To update the rows that compose the coverage table, run the following steps:
+        </p>
+        <ol>
+          <li>Open the <a href="https://w3c.github.io/presentation-api/">Presentation API</a> specification in your favorite browser</li>
+          <li>Run the following code in a console window to build the internal representation used to render the table above.</li>
+          <li>Copy the result and paste it in the <code>toc.js</code> file in the same folder as the source of this document.</li>
+          <li>Refresh this document.</li>
+        </ol>
+        <pre>
+// List of section titles to skip
+// (because they don't contain testable assertions per se)
+var sectionsToIgnore = [
+  'Introduction',
+  'Use cases and requirements',
+  'Conformance',
+  'Terminology',
+  'Examples',
+  'Common idioms',
+  'Security and privacy considerations',
+  'Acknowledgments',
+  'CR exit criteria',
+  'References'
+];
+
+
+// Custom forEach function for querySelectorAll results
+var forEach = function (array, callback, scope) {
+  for (var i = 0; i < array.length; i++) {
+    callback.call(scope, array[i], i);
+  }
+};
+
+
+// Parse the table of contents and extract the sections of interest
+var extractTocRecursively = function (tocEntry, section) {
+  forEach(tocEntry.querySelectorAll('ol > li'), function (subTocEntry) {
+    if (subTocEntry.parentNode.parentNode !== tocEntry) {
+      return;
+    }
+
+    // Extract link and main title (skipping the section number in the "span")
+    var link = subTocEntry.querySelector('a');
+    var name = link.textContent.replace(/[\dA-Z]+(\.\s|(\.\d+)+)/, '').trim();
+    if (sectionsToIgnore.includes(name)) {
+      return;
+    }
+
+    var subSection = {
+      number: link.firstChild.textContent.trim(),
+      name: name,
+      url: link.getAttribute('href').substring(1)
+    };
+
+    if (!section.children) {
+      section.children = [];
+    }
+    section.children.push(subSection);
+    extractTocRecursively(subTocEntry, subSection);
+  });
+};
+
+var toc = { name: 'Table of Contents' };
+extractTocRecursively(document.querySelector('#toc'), toc);
+
+console.log(JSON.stringify(toc, null, 2));
+        </pre>
+      </section>
+
+      <section>
+        <h2>How to update the list of tests</h2>
+        <p>
+          To update the list of tests and have them link to the section(s) of the specification that they check, edit the <code>tests.js</code> file that sits along the source of this document. Nothing magic there, that's all the result of a bit of elbow grease. A given test may check more than one section in the specification.
+        </p>
+      </section>
+
+      <section>
+        <h2>How to update the coverage info</h2>
+        <p>
+          To update the information displayed in the last column, edit the <code>coverage.js</code> file that sits along the source of this document. The keys of the <code>coverage</code> object are the ID of the sections, and the values are rough estimate of the test coverage in percent, or an object with a <code>coverage</code> key that sets the coverage percentage, a <code>comments</code> key that lists possible comments about the coverage (in an array of strings), and an <code>assignee</code> key that sets the person responsible for updating the test suite to cover the section.
+        </p>
+        <p>
+          If a section does not appear in the <code>coverage</code> object, a question mark will appear in the last column to indicate that coverage is unknown at this stage.
+        </p>
+      </section>
+    </section>
+  </body>
+
+  <script type="text/javascript" src="toc.js"></script>
+  <script type="text/javascript" src="tests.js"></script>
+  <script type="text/javascript" src="coverage.js"></script>
+  <script type="text/javascript">
+    // Index tests by section
+    var testsBySection = {};
+    tests.forEach(function (test) {
+      var checks = [];
+      if (Array.isArray(test.checks)) {
+        checks = test.checks;
+      }
+      else if (test.checks) {
+        checks = [test.checks];
+      }
+      checks.forEach(function (check) {
+        if (!testsBySection[check]) {
+          testsBySection[check] = [];
+        }
+        testsBySection[check].push(test);
+      });
+      if (checks.length === 0) {
+        if (test.useless) {
+          if (!testsBySection['useless']) {
+            testsBySection['useless'] = [];
+          }
+          testsBySection['useless'].push(test);
+        }
+        else {
+          if (!testsBySection['unknown']) {
+            testsBySection['unknown'] = [];
+          }
+          testsBySection['unknown'].push(test);
+        }
+      }
+    });
+
+
+    var getTestLink = function (test) {
+      // TODO: escape double quotes for title attribute
+      var link = '';
+      if (test.definedIn) {
+        link = '<a href="' + test.definedIn + '" target="presentation-api-testsuite-pr"' +
+          (test.comments ? ' title="' +
+            (Array.isArray(test.comments) ? test.comments.join('\n') :
+              test.comments) +
+          '"' : '') + '>' +
+          test.url + '</a> (PR)';
+      }
+      else {
+        link = '<a href="https://github.com/w3c/web-platform-tests/blob/master/presentation-api/' +
+          test.url + '" target="presentation-api-testsuite"' +
+          (test.comments ? ' title="' +
+            (Array.isArray(test.comments) ? test.comments.join('\n') :
+              test.comments) +
+          '"' : '') + '>' +
+          test.url + '</a>';
+      }
+      return link;
+    };
+
+
+    // Create the table out of toc.js and tests.js variables
+    var buildTableRecursively = function (section, prefix) {
+      var link = '<a href="https://w3c.github.io/presentation-api/#' +
+        section.url + '" target="presentation-api">' +
+        (section.number ? (section.number + ' ') : '') + 
+        section.name +
+        '</a>';
+      var tests = testsBySection['#' + section.url];
+      var testsTxt = '';
+      if (tests) {
+        tests.forEach(function (test) {
+          if (testsTxt) {
+            testsTxt += ',<br/>';
+          }
+          testsTxt += getTestLink(test);
+        });
+      }
+
+      var cover = {};
+      var covered = 'Unknown';
+      var coverTxt = '';
+      var assigneeTxt = '<span class="coverage">?</span>';
+      if (coverage.hasOwnProperty(section.url)) {
+        cover = coverage[section.url];
+        covered = ((typeof cover.coverage !== 'undefined') ?
+          cover.coverage :
+          ((cover.assignee || cover.comments) ? 'Unknown' : cover));
+        if (cover.assignee) {
+          assigneeTxt = cover.assignee;
+        }
+        else if (covered === 100) {
+          assigneeTxt = '';
+        }
+      }
+      if ((section !== toc) && !section.children) {
+        coverTxt = '<span class="coverage';
+        if (covered !== 'Unknown') {
+          if (covered === 100) {
+            coverTxt += ' covered';
+          }
+          else if (covered < 20) {
+            coverTxt += ' workneeded';
+          }
+        }
+        coverTxt += '"';
+        if (cover.comments) {
+          // TODO: escape double quotes
+          coverTxt += ' title="' +
+          (Array.isArray(cover.comments) ? cover.comments.join('\n') : cover.comments) +
+          '"';
+        }
+        coverTxt += '>';
+        if (covered === 'Unknown') {
+          coverTxt += '?';
+        }
+        else if (covered === 100) {
+          coverTxt += '✔';
+        }
+        else if (covered === 0) {
+          coverTxt += '✘';
+        }
+        else {
+          coverTxt += covered + '%';
+        }
+        coverTxt += '</span>';
+        tableBody.innerHTML += '<tr>' +
+          '<td class="link">' + prefix + '<br/>&gt; ' + link + '</td>' +
+          '<td class="link">' + testsTxt + '</td>' +
+          '<td>' + coverTxt + '</td>' +
+          '<td>' + assigneeTxt + '</td>'
+          '</tr>';
+      }
+
+      if (!section.children) {
+        return;
+      }
+      if (section === toc) {
+        prefix = '';
+      }
+      else {
+        if (prefix) {
+          prefix += ' &gt; ';
+        }
+        if (section.number !== '6.') {
+          prefix += link;
+        }
+      }
+      section.children.forEach(function (subSection) {
+        buildTableRecursively(subSection, prefix);
+      });
+    };
+
+    var tableBody = document.querySelector('#table > table > tbody');
+    buildTableRecursively(toc);
+
+    var testsTxt = '';
+    if (testsBySection['unknown'] && (testsBySection['unknown'].length > 0)) {
+      testsBySection['unknown'].forEach(function (test) {
+        if (testsTxt) {
+          testsTxt += ',<br/>';
+        }
+        testsTxt += getTestLink(test);        
+      });
+      tableBody.innerHTML += '<tr>' +
+        '<td class="link">Unknown</td>' +
+        '<td class="link">' + testsTxt + '</td>' +
+        '<td></td>' +
+        '<td></td>';
+    }
+
+    testsTxt = '';
+    if (testsBySection['useless'] && (testsBySection['useless'].length > 0)) {
+      testsBySection['useless'].forEach(function (test) {
+        if (testsTxt) {
+          testsTxt += ',<br/>';
+        }
+        testsTxt += getTestLink(test);        
+      });
+      tableBody.innerHTML += '<tr>' +
+        '<td class="link">May not be needed</td>' +
+        '<td class="link">' + testsTxt + '</td>' +
+        '<td></td>' +
+        '<td></td>';
+    }
+  </script>
+</html>
