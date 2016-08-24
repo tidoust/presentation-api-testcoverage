@@ -40,7 +40,10 @@ var tests = [
   },
   {
     url: 'controlling-ua/getAvailability.html',
-    checks: '#getting-the-presentation-displays-availability-information'
+    checks: [
+      '#getting-the-presentation-displays-availability-information',
+      '#the-list-of-available-presentation-displays'
+    ]
   },
   {
     url: 'controlling-ua/reconnectToPresentation_error-manual.html',
