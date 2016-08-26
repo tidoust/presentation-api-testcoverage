@@ -74,5 +74,15 @@ var tests = [
     url: 'controlling-ua/startNewPresentation_success-manual.html',
     checks: '#starting-a-presentation',
     comments: 'Test invalid, see: https://github.com/w3c/web-platform-tests/issues/3521'
+  },
+  {
+    url: 'controlling-ua/startNewPresentation_mixedcontent-manual.https.html',
+    checks: '#starting-a-presentation',
+    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3590'
+  },
+  {
+    url: 'controlling-ua/startNewPresentation_mixedcontent_multiple-manual.https.html',
+    checks: '#starting-a-presentation',
+    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3590'
   }
 ];
