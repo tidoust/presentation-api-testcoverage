@@ -84,5 +84,21 @@ var tests = [
     url: 'controlling-ua/startNewPresentation_mixedcontent_multiple-manual.https.html',
     checks: '#starting-a-presentation',
     definedIn: 'https://github.com/w3c/web-platform-tests/pull/3590'
+  },
+  {
+    url: 'controlling-ua/startNewPresentation_sandboxing_error-manual.html',
+    checks: [
+      '#starting-a-presentation',
+      '#sandboxing-and-the-allow-presentation-keyword'
+    ],
+    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3602'
+  },
+  {
+    url: 'controlling-ua/startNewPresentation_sandboxing_success-manual.html',
+    checks: [
+      '#starting-a-presentation',
+      '#sandboxing-and-the-allow-presentation-keyword',
+    ],
+    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3602'
   }
 ];
