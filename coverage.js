@@ -43,7 +43,7 @@ var coverage = {
   'closing-a-presentationconnection': {
     coverage: 70,
     comments: [
-      'TODO: test with connection in "connected" state',
+      'TODO: test with connection in connected state',
       'TODO: step 1 - test with terminated connection'
     ]
   },
