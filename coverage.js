@@ -14,7 +14,7 @@ var coverage = {
     coverage: 50,
     comments: [
       'TODO: fix existing tests',
-      'TODO: step 2 - mixed content test',
+      'TODO: step 2 - mixed content',
       'TODO: step 3 - sandboxing',
       'TODO: step 8 - different browsing context, may be hard to test',
       'TODO: step 9.7 - connectionavailable event'
@@ -24,8 +24,38 @@ var coverage = {
     coverage: 50,
     comments: 'TODO: test with addEventListener form'
   },
+  'getting-the-presentation-displays-availability-information': {
+    coverage: 40,
+    comments: [
+      'TODO: step 1 - mixed content',
+      'TODO: step 1 - sandboxing',
+      'TODO: step 4 - implementation-specific though',
+      'TODO: step 5 - NotSupportedError, implementation-specific though',
+      'TODO: step 6 - Same PresentationAvailability returned',
+      'TODO: step 7 - check on true/false attributes, context-specific though'
+    ]
+  },
+  'monitoring-the-list-of-available-presentation-displays': 0,
+  'interface-presentationconnectionavailableevent': 0,
+  'establishing-a-presentation-connection': 0,
   'sending-a-message-through-presentationconnection': 0,
   'receiving-a-message-through-presentationconnection': 0,
+  'closing-a-presentationconnection': {
+    coverage: 70,
+    comments: [
+      'TODO: test with connection in "connected" state',
+      'TODO: step 1 - test with terminated connection'
+    ]
+  },
+  'terminating-a-presentation-in-a-controlling-browsing-context': {
+    coverage: 50,
+    comments: [
+      'TODO: fix test',
+      'TODO: no terminate event if not connected',
+      'TODO: terminate event with multiple browsing contexts',
+      'TODO: receiving context gets closed'
+    ]
+  },
   'terminating-a-presentation-in-a-receiving-browsing-context': 0,
   'handling-a-termination-confirmation-in-a-controlling-user-agent': 0,
   'event-handlers-1': {
