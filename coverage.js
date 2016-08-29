@@ -11,11 +11,9 @@ var coverage = {
     ]
   },
   'reconnecting-to-a-presentation': {
-    coverage: 50,
+    coverage: 70,
     comments: [
       'TODO: fix existing tests',
-      'TODO: step 2 - mixed content',
-      'TODO: step 3 - sandboxing',
       'TODO: step 8 - different browsing context, may be hard to test',
       'TODO: step 9.7 - connectionavailable event'
     ]
@@ -25,10 +23,8 @@ var coverage = {
     comments: 'TODO: test with addEventListener form'
   },
   'getting-the-presentation-displays-availability-information': {
-    coverage: 40,
+    coverage: 70,
     comments: [
-      'TODO: step 1 - mixed content',
-      'TODO: step 1 - sandboxing',
       'TODO: step 4 - implementation-specific though',
       'TODO: step 5 - NotSupportedError, implementation-specific though',
       'TODO: step 6 - Same PresentationAvailability returned',
