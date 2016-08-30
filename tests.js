@@ -47,8 +47,7 @@ var tests = [
   },
   {
     url: 'controlling-ua/getAvailability_mixedcontent.https.html',
-    checks: '#getting-the-presentation-displays-availability-information',
-    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3590'
+    checks: '#getting-the-presentation-displays-availability-information'
   },
   {
     url: 'controlling-ua/getAvailability_sandboxing_error.html',
@@ -80,8 +79,7 @@ var tests = [
   },
   {
     url: 'controlling-ua/reconnectToPresentation_mixedcontent.https.html',
-    checks: '#reconnecting-to-a-presentation',
-    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3590'
+    checks: '#reconnecting-to-a-presentation'
   },
   {
     url: 'controlling-ua/reconnectToPresentation_sandboxing_error.html',
@@ -119,13 +117,11 @@ var tests = [
   },
   {
     url: 'controlling-ua/startNewPresentation_mixedcontent-manual.https.html',
-    checks: '#starting-a-presentation',
-    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3590'
+    checks: '#starting-a-presentation'
   },
   {
     url: 'controlling-ua/startNewPresentation_mixedcontent_multiple-manual.https.html',
-    checks: '#starting-a-presentation',
-    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3590'
+    checks: '#starting-a-presentation'
   },
   {
     url: 'controlling-ua/startNewPresentation_sandboxing_error-manual.html',
