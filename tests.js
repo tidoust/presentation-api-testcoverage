@@ -54,16 +54,14 @@ var tests = [
     checks: [
       '#getting-the-presentation-displays-availability-information',
       '#sandboxing-and-the-allow-presentation-keyword'
-    ],
-    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3602'
+    ]
   },
   {
     url: 'controlling-ua/getAvailability_sandboxing_success.html',
     checks: [
       '#getting-the-presentation-displays-availability-information',
       '#sandboxing-and-the-allow-presentation-keyword'
-    ],
-    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3602'
+    ]
   },
   {
     url: 'controlling-ua/reconnectToPresentation_error-manual.html',
@@ -86,16 +84,14 @@ var tests = [
     checks: [
       '#reconnecting-to-a-presentation',
       '#sandboxing-and-the-allow-presentation-keyword'
-    ],
-    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3602'
+    ]
   },
   {
     url: 'controlling-ua/reconnectToPresentation_sandboxing_success.html',
     checks: [
       '#reconnecting-to-a-presentation',
       '#sandboxing-and-the-allow-presentation-keyword'
-    ],
-    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3602'
+    ]
   },
   {
     url: 'controlling-ua/startNewPresentation_error-manual.html',
@@ -128,15 +124,13 @@ var tests = [
     checks: [
       '#starting-a-presentation',
       '#sandboxing-and-the-allow-presentation-keyword'
-    ],
-    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3602'
+    ]
   },
   {
     url: 'controlling-ua/startNewPresentation_sandboxing_success-manual.html',
     checks: [
       '#starting-a-presentation',
       '#sandboxing-and-the-allow-presentation-keyword',
-    ],
-    definedIn: 'https://github.com/w3c/web-platform-tests/pull/3602'
+    ]
   }
 ];
