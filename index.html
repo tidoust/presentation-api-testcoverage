@@ -73,6 +73,69 @@
       </ul>
     </section>
 
+    <section id="plan">
+      <h2>Proposed action plan</h2>
+
+      <section>
+        <h3>By end of October 2016</h3>
+        <ul>
+          <li>
+            Work on tests:
+            <ul>
+              <li>Fix existing tests, see <a href="https://github.com/w3c/web-platform-tests/issues?q=is%3Aopen+label%3Apresentation-api">Open issues</a></li>
+              <li>Move ChromeCast hardcoded app ID to separate file to avoid duplication of configuration settings.</li>
+              <li>Starting a presentation tests complete</li>
+              <li>Reconnecting to a presentation tests complete</li>
+              <li><code>addEventListener</code> tests for <code>PresentationRequest</code> event handlers</li>
+              <li><code>getAvailability</code> tests complete</li>
+              <li>Closing a presentation connection tests complete</li>
+              <li>Terminating a presentation connection from controlling side tests complete</li>
+            </ul>
+          </li>
+          <li>
+            Answer questions:
+            <ul>
+              <li>How to test receivers, e.g. how to report results (use the communication channel? send results to the server through a Python script?)</li>
+              <li>How to test the communication channel, e.g. where do sending tests stop.</li>
+              <li>How to reconciliate conflicting results for a given controller when it is used to control different types of receivers (1-UA, 2-UA). One column per combination in the implementation report? Separate columns?</li>
+              <li>How much automation do we want to achieve (e.g. for receiver tests)?</li>
+              <li>Implementers testing plans and expected contributions to the test suite?</li>
+              <li>Test contributors?</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>By end of November 2016</h3>
+        <ul>
+          <li>
+            Work on tests:
+            <ul>
+              <li>Tests on creating a receiving browsing context complete</li>
+              <li>Tests on <code>PresentationReceiver</code> complete</li>
+              <li>Tests on communication channel complete</li>
+              <li>Tests on terminating a presentation connection from receiving side complete</li>
+              <li>"Inner" algorithms tests complete (e.g. monitoring the list of available presentation displays)</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>By mid-December 2016</h3>
+        <ul>
+          <li>
+            Work on tests:
+            <ul>
+              <li>Manual test descriptions crystal clear on test conditions</li>
+            </ul>
+          </li>
+          <li>Implementation report available. Implementers should report on test results.</li>
+        </ul>
+      </section>
+    </section>
+
     <section id='table'>
       <h2>Test coverage</h2>
 
