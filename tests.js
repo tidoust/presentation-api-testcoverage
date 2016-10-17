@@ -19,8 +19,7 @@ var tests = [
     checks: [
       '#terminating-a-presentation-in-a-controlling-browsing-context',
       '#event-handlers-1'
-    ],
-    comments: 'Test invalid, see: https://github.com/w3c/web-platform-tests/issues/3522'
+    ]
   },
   {
     url: 'controlling-ua/PresentationRequest_error.html',
@@ -94,22 +93,13 @@ var tests = [
     ]
   },
   {
-    url: 'controlling-ua/startNewPresentation_error-manual.html',
-    checks: '#starting-a-presentation',
-    comments: [
-      'step 11',
-      'test invalid, see: https://github.com/w3c/web-platform-tests/issues/3527'
-    ]
-  },
-  {
     url: 'controlling-ua/startNewPresentation_error.html',
     checks: '#starting-a-presentation',
     comments: 'step 1'
   },
   {
     url: 'controlling-ua/startNewPresentation_success-manual.html',
-    checks: '#starting-a-presentation',
-    comments: 'Test invalid, see: https://github.com/w3c/web-platform-tests/issues/3521'
+    checks: '#starting-a-presentation'
   },
   {
     url: 'controlling-ua/startNewPresentation_mixedcontent-manual.https.html',
@@ -132,5 +122,25 @@ var tests = [
       '#starting-a-presentation',
       '#sandboxing-and-the-allow-presentation-keyword',
     ]
+  },
+  {
+    url: 'controlling-ua/startNewPresentation_displaynotallowed-manual.html',
+    checks: '#starting-a-presentation',
+    comments: 'step 11'
+  },
+  {
+    url: 'controlling-ua/startNewPresentation_displaynotfound-manual.html',
+    checks: '#starting-a-presentation',
+    comments: 'step 10'
+  },
+  {
+    url: 'controlling-ua/startNewPresentation_unsettledpromise-manual.html',
+    checks: '#starting-a-presentation',
+    comments: 'step 5'
+  },
+  {
+    url: 'controlling-ua/PresentationRequest_onconnectionavailable-manual.html',
+    checks: '#starting-a-presentation',
+    comments: 'step 20'
   }
 ];

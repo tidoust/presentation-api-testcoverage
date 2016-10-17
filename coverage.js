@@ -1,15 +1,7 @@
 var coverage = {
   'receiving-user-agent': 0,
   'constructing-a-presentationrequest': 100,
-  'starting-a-presentation': {
-    coverage: 80,
-    comments: [
-      'TODO: fix existing tests',
-      'TODO: step 5 - re-entrance, not sure this can be forced though',
-      'TODO: step 10 - NotFoundError, somewhat implementation-specific though',
-      'TODO: step 20 - done in defaultRequest_success-manual.html, move to own test?'
-    ]
-  },
+  'starting-a-presentation': 100,
   'reconnecting-to-a-presentation': {
     coverage: 70,
     comments: [
