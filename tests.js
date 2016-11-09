@@ -26,6 +26,11 @@ var tests = [
     checks: '#constructing-a-presentationrequest'
   },
   {
+    url: 'controlling-ua/PresentationRequest_onconnectionavailable-manual.html',
+    checks: '#starting-a-presentation',
+    comments: 'step 20'
+  },
+  {
     url: 'controlling-ua/PresentationRequest_success.html',
     checks: '#constructing-a-presentationrequest'
   },
@@ -63,20 +68,15 @@ var tests = [
     ]
   },
   {
-    url: 'controlling-ua/reconnectToPresentation_error-manual.html',
-    checks: '#reconnecting-to-a-presentation',
-    comments: [
-      'step 10',
-      'could be automated, see: https://github.com/w3c/web-platform-tests/issues/3524'
-    ]
-  },
-  {
-    url: 'controlling-ua/reconnectToPresentation_success-manual.html',
-    checks: '#reconnecting-to-a-presentation'
-  },
-  {
     url: 'controlling-ua/reconnectToPresentation_mixedcontent.https.html',
     checks: '#reconnecting-to-a-presentation'
+  },
+  {
+    url: 'controlling-ua/reconnectToPresentation_notfound_error.html ',
+    checks: '#reconnecting-to-a-presentation',
+    comments: [
+      'step 10'
+    ]
   },
   {
     url: 'controlling-ua/reconnectToPresentation_sandboxing_error.html',
@@ -93,13 +93,23 @@ var tests = [
     ]
   },
   {
+    url: 'controlling-ua/reconnectToPresentation_success-manual.html',
+    checks: '#reconnecting-to-a-presentation'
+  },
+  {
+    url: 'controlling-ua/startNewPresentation_displaynotallowed-manual.html',
+    checks: '#starting-a-presentation',
+    comments: 'step 11'
+  },
+  {
+    url: 'controlling-ua/startNewPresentation_displaynotfound-manual.html',
+    checks: '#starting-a-presentation',
+    comments: 'step 10'
+  },
+  {
     url: 'controlling-ua/startNewPresentation_error.html',
     checks: '#starting-a-presentation',
     comments: 'step 1'
-  },
-  {
-    url: 'controlling-ua/startNewPresentation_success-manual.html',
-    checks: '#starting-a-presentation'
   },
   {
     url: 'controlling-ua/startNewPresentation_mixedcontent-manual.https.html',
@@ -124,23 +134,12 @@ var tests = [
     ]
   },
   {
-    url: 'controlling-ua/startNewPresentation_displaynotallowed-manual.html',
-    checks: '#starting-a-presentation',
-    comments: 'step 11'
-  },
-  {
-    url: 'controlling-ua/startNewPresentation_displaynotfound-manual.html',
-    checks: '#starting-a-presentation',
-    comments: 'step 10'
+    url: 'controlling-ua/startNewPresentation_success-manual.html',
+    checks: '#starting-a-presentation'
   },
   {
     url: 'controlling-ua/startNewPresentation_unsettledpromise-manual.html',
     checks: '#starting-a-presentation',
     comments: 'step 5'
-  },
-  {
-    url: 'controlling-ua/PresentationRequest_onconnectionavailable-manual.html',
-    checks: '#starting-a-presentation',
-    comments: 'step 20'
   }
 ];

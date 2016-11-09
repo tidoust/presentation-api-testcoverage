@@ -83,8 +83,8 @@
             Work on tests:
             <ul>
               <li>Fix existing tests, see <a href="https://github.com/w3c/web-platform-tests/issues?q=is%3Aopen+label%3Apresentation-api">Open issues</a></li>
-              <li>Move ChromeCast hardcoded app ID to separate file to avoid duplication of configuration settings.</li>
-              <li>Starting a presentation tests complete</li>
+              <li><del>Move ChromeCast hardcoded app ID to separate file to avoid duplication of configuration settings.</del> (<code>common.js</code> file created)</li>
+              <li><del>Starting a presentation tests complete</del></li>
               <li>Reconnecting to a presentation tests complete</li>
               <li><code>addEventListener</code> tests for <code>PresentationRequest</code> event handlers</li>
               <li><code>getAvailability</code> tests complete</li>
@@ -95,7 +95,7 @@
           <li>
             Answer questions:
             <ul>
-              <li>How to test receivers, e.g. how to report results (use the communication channel? send results to the server through a Python script?)</li>
+              <li>How to test receivers, e.g. how to report results <em>⇒ We'll send results to the server through a Python script</em></li>
               <li>How to test the communication channel, e.g. where do sending tests stop.</li>
               <li>How to reconciliate conflicting results for a given controller when it is used to control different types of receivers (1-UA, 2-UA). One column per combination in the implementation report? Separate columns?</li>
               <li>How much automation do we want to achieve (e.g. for receiver tests)?</li>
