@@ -1,5 +1,9 @@
 var tests = [
   {
+    url: 'controlling-ua/PresentationAvailability_onchange-manual.html',
+    checks: '#monitoring-the-list-of-available-presentation-displays'
+  },
+  {
     url: 'controlling-ua/PresentationConnection_onclosed-manual.html',
     checks: [
       '#closing-a-presentationconnection',

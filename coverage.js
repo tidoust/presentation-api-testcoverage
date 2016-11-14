@@ -23,7 +23,13 @@ var coverage = {
       'TODO: step 7 - check on true/false attributes, context-specific though'
     ]
   },
-  'monitoring-the-list-of-available-presentation-displays': 0,
+  'monitoring-the-list-of-available-presentation-displays': {
+    coverage: 70,
+    comments: [
+      'TODO: test with multiple availability URLs in the set of availability objects',
+      'TODO: test with multiple presentation displays (test user may not have multiple displays at hand though)'
+    ]
+  },
   'interface-presentationconnectionavailableevent': 0,
   'establishing-a-presentation-connection': 0,
   'sending-a-message-through-presentationconnection': 0,
