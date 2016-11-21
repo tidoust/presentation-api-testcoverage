@@ -3,9 +3,8 @@ var coverage = {
   'constructing-a-presentationrequest': 100,
   'starting-a-presentation': 100,
   'reconnecting-to-a-presentation': {
-    coverage: 70,
+    coverage: 80,
     comments: [
-      'TODO: fix existing tests',
       'TODO: step 8 - different browsing context, may be hard to test',
       'TODO: step 9.7 - connectionavailable event'
     ]
