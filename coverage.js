@@ -1,27 +1,28 @@
 var coverage = {
+  'controlling-user-agent': {
+    coverage: 50,
+    comments: [
+      'TODO: check initial default value is null',
+      'TODO: check attribute holds given PresentationRequest instance when set'
+    ]
+  },
   'receiving-user-agent': 0,
   'constructing-a-presentationrequest': 100,
-  'starting-a-presentation': 100,
+  'selecting-a-presentation-display': 100,
+  'starting-a-presentation-from-a-default-presentation-request': 100,
+  'starting-a-presentation-connection': 100,
   'reconnecting-to-a-presentation': {
     coverage: 80,
     comments: [
-      'TODO: step 8 - different browsing context, may be hard to test',
-      'TODO: step 9.7 - connectionavailable event'
+      'TODO: step 4.5 - check that connection gets established',
+      'TODO: step 6 - different browsing context, connectionavailable, and connection establishment (may be hard to test)'
     ]
   },
   'event-handlers': {
-    coverage: 50,
-    comments: 'TODO: test with addEventListener form'
+    coverage: 80,
+    comments: 'TODO: some tests use "onxxx" form, others use "addEventListener" through EventWatcher, make sure we cover both forms'
   },
-  'getting-the-presentation-displays-availability-information': {
-    coverage: 70,
-    comments: [
-      'TODO: step 4 - implementation-specific though',
-      'TODO: step 5 - NotSupportedError, implementation-specific though',
-      'TODO: step 6 - Same PresentationAvailability returned',
-      'TODO: step 7 - check on true/false attributes, context-specific though'
-    ]
-  },
+  'getting-the-presentation-displays-availability-information': 100,
   'monitoring-the-list-of-available-presentation-displays': {
     coverage: 70,
     comments: [
@@ -29,10 +30,22 @@ var coverage = {
       'TODO: test with multiple presentation displays (test user may not have multiple displays at hand though)'
     ]
   },
-  'interface-presentationconnectionavailableevent': 0,
-  'establishing-a-presentation-connection': 0,
-  'sending-a-message-through-presentationconnection': 0,
-  'receiving-a-message-through-presentationconnection': 0,
+  'interface-presentationconnectionavailableevent': 100,
+  'establishing-a-presentation-connection': {
+    coverage: 90,
+    comments: [
+      'TODO: step 4 - but probably impossible as there is no way to force an error',
+      'Note algorithm will also be checked in reconnect scenarios once steps 4.5 and 6 of reconnect algorithms get checked'
+    ]
+  },
+  'sending-a-message-through-presentationconnection': {
+    coverage: 50,
+    comments: 'TODO: same test from a receiving page perspective'
+  },
+  'receiving-a-message-through-presentationconnection': {
+    coverage: 50,
+    comments: 'TODO: same test from a receiving page perspective'
+  },
   'closing-a-presentationconnection': {
     coverage: 70,
     comments: [

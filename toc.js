@@ -41,16 +41,26 @@ var toc = {
             },
             {
               "number": "6.3.2",
-              "name": "Starting a presentation",
-              "url": "starting-a-presentation"
+              "name": "Selecting a presentation display",
+              "url": "selecting-a-presentation-display"
             },
             {
               "number": "6.3.3",
+              "name": "Starting a presentation from a default presentation request",
+              "url": "starting-a-presentation-from-a-default-presentation-request"
+            },
+            {
+              "number": "6.3.4",
+              "name": "Starting a presentation connection",
+              "url": "starting-a-presentation-connection"
+            },
+            {
+              "number": "6.3.5",
               "name": "Reconnecting to a presentation",
               "url": "reconnecting-to-a-presentation"
             },
             {
-              "number": "6.3.4",
+              "number": "6.3.6",
               "name": "Event Handlers",
               "url": "event-handlers"
             }
@@ -63,8 +73,8 @@ var toc = {
           "children": [
             {
               "number": "6.4.1",
-              "name": "The set of availability objects",
-              "url": "the-set-of-availability-objects"
+              "name": "The set of presentation availability objects",
+              "url": "the-set-of-presentation-availability-objects"
             },
             {
               "number": "6.4.2",

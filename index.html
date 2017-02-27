@@ -76,6 +76,10 @@
     <section id="plan">
       <h2>Proposed action plan</h2>
 
+      <p class="note">
+        Milestones in this action plan were set in October 2016 and should now be considered obsolete. The actions items remain valid. Those done are flagged accordingly.
+      </p>
+
       <section>
         <h3>By end of October 2016</h3>
         <ul>
@@ -87,7 +91,7 @@
               <li><del>Starting a presentation tests complete</del></li>
               <li>Reconnecting to a presentation tests complete</li>
               <li><code>addEventListener</code> tests for <code>PresentationRequest</code> event handlers</li>
-              <li><code>getAvailability</code> tests complete</li>
+              <li><del><code>getAvailability</code> tests complete</del></li>
               <li>Closing a presentation connection tests complete</li>
               <li>Terminating a presentation connection from controlling side tests complete</li>
             </ul>
@@ -96,9 +100,9 @@
             Answer questions:
             <ul>
               <li>How to test receivers, e.g. how to report results <em>⇒ We'll send results to the server through a Python script</em></li>
-              <li>How to test the communication channel, e.g. where do sending tests stop.</li>
+              <li>How to test the communication channel, e.g. where do sending tests stop <em>⇒ The receiving end must send back received messages to the server through a Python script</em></li>
               <li>How to reconciliate conflicting results for a given controller when it is used to control different types of receivers (1-UA, 2-UA). One column per combination in the implementation report? Separate columns?</li>
-              <li>How much automation do we want to achieve (e.g. for receiver tests)?</li>
+              <li>How much automation do we want to achieve (e.g. for receiver tests)? <em>⇒ We'll start by creating individual test files, and will refine and aggregate tests afterwards as needed</em></li>
               <li>Implementers testing plans and expected contributions to the test suite?</li>
               <li>Test contributors?</li>
             </ul>
@@ -114,7 +118,8 @@
             <ul>
               <li>Tests on creating a receiving browsing context complete</li>
               <li>Tests on <code>PresentationReceiver</code> complete</li>
-              <li>Tests on communication channel complete</li>
+              <li><del>Tests on communication channel complete for a controlling user agent</del></li>
+              <li>Tests on communication channel complete for a receiving user agent</li>
               <li>Tests on terminating a presentation connection from receiving side complete</li>
               <li>"Inner" algorithms tests complete (e.g. monitoring the list of available presentation displays)</li>
             </ul>
@@ -187,7 +192,8 @@ var sectionsToIgnore = [
   'Security and privacy considerations',
   'Acknowledgments',
   'CR exit criteria',
-  'References'
+  'References',
+  'Change log'
 ];
 
 
