@@ -147,5 +147,12 @@ var tests = [
     url: 'controlling-ua/startNewPresentation_unsettledpromise-manual.html',
     checks: '#selecting-a-presentation-display',
     comments: 'step 3'
+  },
+  {
+    url: 'receiving-ua/PresentationReceiver_create-manual.html',
+    checks: [
+      '#receiving-user-agent',
+      '#creating-a-receiving-browsing-context'
+    ]
   }
 ];

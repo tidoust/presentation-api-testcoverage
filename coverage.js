@@ -6,7 +6,7 @@ var coverage = {
       'TODO: check attribute holds given PresentationRequest instance when set'
     ]
   },
-  'receiving-user-agent': 0,
+  'receiving-user-agent': 100,
   'constructing-a-presentationrequest': 100,
   'selecting-a-presentation-display': 100,
   'starting-a-presentation-from-a-default-presentation-request': 100,
@@ -68,7 +68,7 @@ var coverage = {
     coverage: 50,
     comments: 'TODO: tests with addEventListener form'
   },
-  'creating-a-receiving-browsing-context': 0,
+  'creating-a-receiving-browsing-context': 100,
   'monitoring-incoming-presentation-connections': 0,
   'event-handlers-2': 0,
   'sandboxing-and-the-allow-presentation-keyword': 100
