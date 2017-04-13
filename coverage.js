@@ -38,14 +38,8 @@ var coverage = {
       'Note algorithm will also be checked in reconnect scenarios once steps 4.5 and 6 of reconnect algorithms get checked'
     ]
   },
-  'sending-a-message-through-presentationconnection': {
-    coverage: 50,
-    comments: 'TODO: same test from a receiving page perspective'
-  },
-  'receiving-a-message-through-presentationconnection': {
-    coverage: 50,
-    comments: 'TODO: same test from a receiving page perspective'
-  },
+  'sending-a-message-through-presentationconnection': 100,
+  'receiving-a-message-through-presentationconnection': 100,
   'closing-a-presentationconnection': {
     coverage: 70,
     comments: [

@@ -154,5 +154,16 @@ var tests = [
       '#receiving-user-agent',
       '#creating-a-receiving-browsing-context'
     ]
+  },
+  {
+    url: 'receiving-ua/PresentationConnection_send-manual.html',
+    checks: '#sending-a-message-through-presentationconnection'
+  },
+  {
+    url: 'receiving-ua/PresentationConnection_onmessage-manual.html',
+    checks: [
+      '#receiving-a-message-through-presentationconnection',
+      '#event-handlers-1'
+    ]
   }
 ];
