@@ -56,14 +56,17 @@ var coverage = {
       'TODO: receiving context gets closed'
     ]
   },
-  'terminating-a-presentation-in-a-receiving-browsing-context': 0,
-  'handling-a-termination-confirmation-in-a-controlling-user-agent': 0,
+  'terminating-a-presentation-in-a-receiving-browsing-context': 100,
+  'handling-a-termination-confirmation-in-a-controlling-user-agent': 100,
   'event-handlers-1': {
-    coverage: 50,
-    comments: 'TODO: tests with addEventListener form'
+    coverage: 90,
+    comments: 'TODO: make sure tests cover addEventListener and onxxx form'
   },
   'creating-a-receiving-browsing-context': 100,
-  'monitoring-incoming-presentation-connections': 0,
-  'event-handlers-2': 0,
+  'monitoring-incoming-presentation-connections': 100,
+  'event-handlers-2': {
+    coverage: 90,
+    comments: 'TODO: make sure tests cover addEventListener and onxxx form'
+  },
   'sandboxing-and-the-allow-presentation-keyword': 100
 };
