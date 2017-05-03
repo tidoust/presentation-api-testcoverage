@@ -1,11 +1,5 @@
 var coverage = {
-  'controlling-user-agent': {
-    coverage: 50,
-    comments: [
-      'TODO: check initial default value is null',
-      'TODO: check attribute holds given PresentationRequest instance when set'
-    ]
-  },
+  'controlling-user-agent': 100,
   'receiving-user-agent': 100,
   'constructing-a-presentationrequest': 100,
   'selecting-a-presentation-display': 100,

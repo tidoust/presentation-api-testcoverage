@@ -1,5 +1,9 @@
 var tests = [
   {
+    url: 'controlling-ua/defaultRequest.https.html',
+    checks: '#controlling-user-agent'
+  },
+  {
     url: 'controlling-ua/defaultRequest_success-manual.https.html',
     checks: [
       '#controlling-user-agent',
