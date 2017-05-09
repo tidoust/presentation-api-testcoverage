@@ -30,14 +30,14 @@ var tests = [
     checks: '#monitoring-the-list-of-available-presentation-displays'
   },
   {
-    url: 'controlling-ua/PresentationConnection_onclosed-manual.https.html',
+    url: 'controlling-ua/PresentationConnection_onclose-manual.https.html',
     checks: [
       '#closing-a-presentationconnection',
       '#event-handlers-1'
     ]
   },
   {
-    url: 'controlling-ua/PresentationConnection_onconnected-manual.https.html',
+    url: 'controlling-ua/PresentationConnection_onconnect-manual.https.html',
     checks: [
       '#starting-a-presentation-connection',
       '#establishing-a-presentation-connection',
@@ -52,7 +52,7 @@ var tests = [
     ]
   },
   {
-    url: 'controlling-ua/PresentationConnection_onterminated-manual.https.html',
+    url: 'controlling-ua/PresentationConnection_onterminate-manual.https.html',
     checks: [
       '#terminating-a-presentation-in-a-controlling-browsing-context',
       '#event-handlers-1'
@@ -134,7 +134,7 @@ var tests = [
     url: 'controlling-ua/startNewPresentation_sandboxing_success-manual.https.html',
     checks: [
       '#starting-a-presentation-connection',
-      '#sandboxing-and-the-allow-presentation-keyword',
+      '#sandboxing-and-the-allow-presentation-keyword'
     ]
   },
   {

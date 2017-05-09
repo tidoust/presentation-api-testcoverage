@@ -5,17 +5,8 @@ var coverage = {
   'selecting-a-presentation-display': 100,
   'starting-a-presentation-from-a-default-presentation-request': 100,
   'starting-a-presentation-connection': 100,
-  'reconnecting-to-a-presentation': {
-    coverage: 80,
-    comments: [
-      'TODO: step 4.5 - check that connection gets established',
-      'TODO: step 6 - different browsing context, connectionavailable, and connection establishment (may be hard to test)'
-    ]
-  },
-  'event-handlers': {
-    coverage: 80,
-    comments: 'TODO: some tests use "onxxx" form, others use "addEventListener" through EventWatcher, make sure we cover both forms'
-  },
+  'reconnecting-to-a-presentation': 100,
+  'event-handlers': 100,
   'getting-the-presentation-displays-availability-information': 100,
   'monitoring-the-list-of-available-presentation-displays': {
     coverage: 70,
@@ -34,22 +25,8 @@ var coverage = {
   },
   'sending-a-message-through-presentationconnection': 100,
   'receiving-a-message-through-presentationconnection': 100,
-  'closing-a-presentationconnection': {
-    coverage: 70,
-    comments: [
-      'TODO: test with connection in connected state',
-      'TODO: step 1 - test with terminated connection'
-    ]
-  },
-  'terminating-a-presentation-in-a-controlling-browsing-context': {
-    coverage: 50,
-    comments: [
-      'TODO: fix test',
-      'TODO: no terminate event if not connected',
-      'TODO: terminate event with multiple browsing contexts',
-      'TODO: receiving context gets closed'
-    ]
-  },
+  'closing-a-presentationconnection': 100,
+  'terminating-a-presentation-in-a-controlling-browsing-context': 100,
   'terminating-a-presentation-in-a-receiving-browsing-context': 100,
   'handling-a-termination-confirmation-in-a-controlling-user-agent': 100,
   'event-handlers-1': {
