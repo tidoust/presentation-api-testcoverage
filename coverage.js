@@ -29,10 +29,7 @@ var coverage = {
   'terminating-a-presentation-in-a-controlling-browsing-context': 100,
   'terminating-a-presentation-in-a-receiving-browsing-context': 100,
   'handling-a-termination-confirmation-in-a-controlling-user-agent': 100,
-  'event-handlers-1': {
-    coverage: 90,
-    comments: 'TODO: make sure tests cover addEventListener and onxxx form'
-  },
+  'event-handlers-1': 100,
   'creating-a-receiving-browsing-context': 100,
   'monitoring-incoming-presentation-connections': 100,
   'event-handlers-2': {
