@@ -44,6 +44,9 @@
       .workneeded {
         color: #c00;
       }
+      .notapplicable {
+        color: #070;
+      }
     </style>
   </head>
   <body>
@@ -363,6 +366,9 @@ console.log(JSON.stringify(toc, null, 2));
           else if (covered < 20) {
             coverTxt += ' workneeded';
           }
+          else if (covered === 'N/A') {
+            coverTxt += ' notapplicable';
+          }
         }
         coverTxt += '"';
         if (cover.comments) {
@@ -380,6 +386,9 @@ console.log(JSON.stringify(toc, null, 2));
         }
         else if (covered === 0) {
           coverTxt += '✘';
+        }
+        else if (covered === 'N/A') {
+          coverTxt += covered;
         }
         else {
           coverTxt += covered + '%';

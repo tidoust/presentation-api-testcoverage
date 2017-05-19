@@ -15,6 +15,7 @@ var tests = [
     url: 'controlling-ua/getAvailability.https.html',
     checks: [
       '#getting-the-presentation-displays-availability-information',
+      '#the-set-of-presentation-availability-objects',
       '#the-list-of-available-presentation-displays'
     ]
   },
@@ -27,12 +28,17 @@ var tests = [
   },
   {
     url: 'controlling-ua/PresentationAvailability_onchange-manual.https.html',
-    checks: '#monitoring-the-list-of-available-presentation-displays'
+    checks: [
+      '#monitoring-the-list-of-available-presentation-displays',
+      '#the-set-of-presentation-availability-objects',
+      '#the-list-of-available-presentation-displays'
+    ]
   },
   {
     url: 'controlling-ua/PresentationConnection_onclose-manual.https.html',
     checks: [
       '#closing-a-presentationconnection',
+      '#interface-presentationconnectioncloseevent',
       '#event-handlers-1'
     ]
   },
@@ -156,12 +162,17 @@ var tests = [
     url: 'receiving-ua/PresentationConnectionList_onconnectionavailable-manual.https.html',
     checks: [
       '#monitoring-incoming-presentation-connections',
+      '#the-set-of-presentation-availability-objects',
+      '#the-list-of-available-presentation-displays',
       '#event-handlers-2'
     ]
   },
   {
     url: 'receiving-ua/PresentationConnection_onclose-manual.https.html',
-    checks: '#closing-a-presentationconnection'
+    checks: [
+      '#closing-a-presentationconnection',
+      '#interface-presentationconnectioncloseevent'
+    ]
   },
   {
     url: 'receiving-ua/PresentationConnection_onmessage-manual.https.html',

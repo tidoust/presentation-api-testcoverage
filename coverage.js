@@ -7,6 +7,8 @@ var coverage = {
   'starting-a-presentation-connection': 100,
   'reconnecting-to-a-presentation': 100,
   'event-handlers': 100,
+  'the-set-of-presentation-availability-objects': 'N/A',
+  'the-list-of-available-presentation-displays': 'N/A',
   'getting-the-presentation-displays-availability-information': 100,
   'monitoring-the-list-of-available-presentation-displays': {
     coverage: 70,
@@ -19,12 +21,12 @@ var coverage = {
   'establishing-a-presentation-connection': {
     coverage: 90,
     comments: [
-      'TODO: step 4 - but probably impossible as there is no way to force an error',
-      'Note algorithm will also be checked in reconnect scenarios once steps 4.5 and 6 of reconnect algorithms get checked'
+      'TODO: step 4 - but probably impossible as there is no way to force an error'
     ]
   },
   'sending-a-message-through-presentationconnection': 100,
   'receiving-a-message-through-presentationconnection': 100,
+  'interface-presentationconnectioncloseevent': 100,
   'closing-a-presentationconnection': 100,
   'terminating-a-presentation-in-a-controlling-browsing-context': 100,
   'terminating-a-presentation-in-a-receiving-browsing-context': 100,
