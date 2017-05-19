@@ -11,17 +11,17 @@ var coverage = {
   'the-list-of-available-presentation-displays': 'N/A',
   'getting-the-presentation-displays-availability-information': 100,
   'monitoring-the-list-of-available-presentation-displays': {
-    coverage: 70,
+    coverage: 90,
     comments: [
-      'TODO: test with multiple availability URLs in the set of availability objects',
-      'TODO: test with multiple presentation displays (test user may not have multiple displays at hand though)'
+      'If possible: test with multiple availability URLs in the set of availability objects',
+      'If possible: test with multiple presentation displays (test user may not have multiple displays at hand though)'
     ]
   },
   'interface-presentationconnectionavailableevent': 100,
   'establishing-a-presentation-connection': {
     coverage: 90,
     comments: [
-      'TODO: step 4 - but probably impossible as there is no way to force an error'
+      'If possible: step 4 - but how to force an error?'
     ]
   },
   'sending-a-message-through-presentationconnection': 100,
