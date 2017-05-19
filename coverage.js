@@ -32,9 +32,6 @@ var coverage = {
   'event-handlers-1': 100,
   'creating-a-receiving-browsing-context': 100,
   'monitoring-incoming-presentation-connections': 100,
-  'event-handlers-2': {
-    coverage: 90,
-    comments: 'TODO: make sure tests cover addEventListener and onxxx form'
-  },
+  'event-handlers-2': 100,
   'sandboxing-and-the-allow-presentation-keyword': 100
 };
